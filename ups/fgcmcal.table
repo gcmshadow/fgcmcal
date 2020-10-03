@@ -5,20 +5,13 @@
 # included by low-level LSST packages such as utils or daf_base.
 # Any other package whose interface is used should be listed explicitly
 # rather than assuming it will be included recursively.
-
-setupRequired(sconsUtils)
-setupRequired(afw)
-setupRequired(daf_persistence)
-setupRequired(obs_base)
-setupRequired(pex_config)
-setupRequired(pipe_tasks)
 setupRequired(fgcm)
 # uses jointcal's PerTractCcdDataIdContainer to bundle visits in a tract in gen2
 setupRequired(jointcal)
 
 # data files for the unittests, and the obs package for that data
-setupOptional(testdata_jointcal)
-setupOptional(obs_subaru)
+#setupOptional(testdata_jointcal)
+#setupOptional(obs_subaru)
 
 envPrepend(PYTHONPATH, ${PRODUCT_DIR}/python)
 envPrepend(PATH, ${PRODUCT_DIR}/bin)
