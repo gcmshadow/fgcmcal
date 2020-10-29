@@ -11,7 +11,8 @@ setupRequired(jointcal)
 
 # data files for the unittests, and the obs package for that data
 #setupOptional(testdata_jointcal)
-#setupOptional(obs_subaru)
+# test data is resolved via metadeps
+setupOptional(obs_subaru)
 
 envPrepend(PYTHONPATH, ${PRODUCT_DIR}/python)
 envPrepend(PATH, ${PRODUCT_DIR}/bin)
